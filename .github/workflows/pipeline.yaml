@@ -58,7 +58,7 @@ jobs:
            git config --global user.name "aamir-34 /svc2"
            git config --global user.email "aq702654@gmail.com"
            
-           git remote set-url origin https://aamir-34:${PAT}@github.com/aamir-34/abcd-repo.git 
+           git remote set-url origin https://aamir-34:${PAT}@github.com/aamir-34/abc2-repo.git 
              
            git add deployment.yaml
            git commit -m "image version updated in deployment file"
