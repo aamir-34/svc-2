@@ -9,7 +9,7 @@ env:
   PROJECT_ID: ${{secrets.GKE_PROJECT}}
   GKE_CLUSTER: work-cluster
   GKE_ZONE: us-central1-c
-  DEPLOYMENT_NAME: nginx:latest
+  DEPLOYMENT_NAME: nginx
   IMAGE: nginx:latest
   TAG: ${{ github.sha }}
 
