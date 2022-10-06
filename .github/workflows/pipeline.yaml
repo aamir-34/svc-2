@@ -11,14 +11,14 @@ env:
   GKE_CLUSTER: work-cluster
   GKE_ZONE: us-central1-c
   DEPLOYMENT_NAME: github-actions-gke
-  IMAGE: github-actions-gke-image10
+  IMAGE: nginx:latest
   TAG: ${{ github.sha }}
   PAT: ${{secrets.PAT}}
 
 jobs:
   setup-build-publish-deploy:
     name: Setup Build Publish Deploy
-    runs-on: ubuntu-latest
+    runs-on: nginx-latest
 
     steps:
 
@@ -47,7 +47,7 @@ jobs:
           docker push "gcr.io/$PROJECT_ID/$IMAGE:$TAG"
       - name: clone repo
         run: |-
-           git clone https://github.com/aamir-34/abcd-repo.git
+           git clone https://github.com/aamir-34 svc2-repo.git
             cd svc2-repo
            git_hash=$(git rev-parse --short "$GITHUB_SHA")
            echo the new image tag will be $git_hash
